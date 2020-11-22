@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class EarthHealth : MonoBehaviour
 {
@@ -19,9 +20,22 @@ public class EarthHealth : MonoBehaviour
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Space)){
-            currentHealth -= 10;
+            DamageEarth(10);
         }
 
         healthbar.setHealth(currentHealth);
+    }
+
+    public void DamageEarth(int damage)
+    {
+        currentHealth -= damage;
+
+        if (currentHealth <= 0)
+        {
+            // Can replace this with an animation call and 
+            // ienumerator to change the scene after the
+            // a timer is up
+            SceneManager.LoadScene("GameOver");
+        }
     }
 }
