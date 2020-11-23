@@ -20,12 +20,17 @@ public class EarthHealth : MonoBehaviour
     void Update()
     {
         healthbar.setHealth(currentHealth);
+           if (Input.GetKeyDown("space"))
+        {
+           DamageEarth(10);
+        }
     }
 
     private void OnTriggerEnter(Collider other){
         if (other.tag == "asteroid"){
             DamageEarth(10);
         }
+      
     }
 
     public void DamageEarth(int damage)
