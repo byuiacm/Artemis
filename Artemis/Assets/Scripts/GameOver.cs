@@ -8,6 +8,7 @@ public class GameOver : MonoBehaviour
     public void ReturnToTitle()
     {
         // SceneManager.LoadScene("Title"); or replace with whatever the title scene is called
+        SceneManager.LoadScene("TitleScene");
         Debug.Log("Return to Title");
     }
 
