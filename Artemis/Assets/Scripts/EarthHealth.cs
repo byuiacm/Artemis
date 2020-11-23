@@ -18,10 +18,12 @@ public class EarthHealth : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space)){
+        healthbar.setHealth(currentHealth);
+    }
+
+    private void OnTriggerEnter(Collider other){
+        if (other.tag == "asteroid"){
             currentHealth -= 10;
         }
-
-        healthbar.setHealth(currentHealth);
     }
 }
