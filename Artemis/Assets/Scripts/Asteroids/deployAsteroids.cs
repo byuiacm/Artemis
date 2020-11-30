@@ -47,7 +47,7 @@ public class deployAsteroids : MonoBehaviour
 
     private void spawnEnemy()
     { 
-        if (asteroids.Count < 5)
+        if (asteroids.Count < 10)
         {
             GameObject a = Instantiate(asteroidPrefab) as GameObject;
             asteroids.Add(a);

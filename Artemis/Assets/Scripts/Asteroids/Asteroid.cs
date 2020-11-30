@@ -37,11 +37,10 @@ public class Asteroid : MonoBehaviour
         float x = transform.position.x;
         float y = transform.position.z;
         transform.position = new Vector3(x + changeX, 0, y + changeY);
+    }
 
-        if (transform.position.x < 10 && transform.position.x > -10)
-        {
-            //Change the if statement
-            kill();
-        }
+    private void OnCollisionEnter(Collision collision)
+    {
+        kill();
     }
 }
