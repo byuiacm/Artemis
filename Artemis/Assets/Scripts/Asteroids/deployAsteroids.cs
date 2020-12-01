@@ -10,7 +10,6 @@ public class deployAsteroids : MonoBehaviour
     private int count = 0;
     List<GameObject> asteroids;
 
-
     // Start is called before the first frame update
     void Start()
     {
